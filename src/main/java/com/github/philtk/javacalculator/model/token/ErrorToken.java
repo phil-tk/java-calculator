@@ -3,10 +3,19 @@ package com.github.philtk.javacalculator.model.token;
 import com.github.philtk.javacalculator.exceptions.CalculatorErrorType;
 import com.github.philtk.javacalculator.utils.Category;
 
-public class ErrorToken extends StaticToken{
+/**
+ * Represents an error token within the calculator.
+ * Used to indicate an invalid state or computation error.
+ */
+public class ErrorToken extends StaticToken {
     private final CalculatorErrorType calculatorErrorType;
 
-    public ErrorToken(final CalculatorErrorType calculatorErrorType){
+    /**
+     * Constructs an ErrorToken with a specified error type.
+     *
+     * @param calculatorErrorType the type of calculator error
+     */
+    public ErrorToken(final CalculatorErrorType calculatorErrorType) {
         this.calculatorErrorType = calculatorErrorType;
     }
 
