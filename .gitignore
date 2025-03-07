@@ -1,38 +1,42 @@
+# Maven and general build folders
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+# Prevent the inclusion of Maven Wrapper
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### Eclipse ###
-.apt_generated
+# Eclipse
+.settings/
 .classpath
-.factorypath
 .project
-.settings
+.apt_generated
+.factorypath
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Java
+*.class
+*.log
