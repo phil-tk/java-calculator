@@ -13,6 +13,8 @@ import java.util.Optional;
 
 /**
  * Handles user input for the calculator, both from button clicks and keyboard inputs.
+ *
+ * @author Phil Winkel
  */
 public class CalculatorInputHandler {
     private final CalculatorController controller;

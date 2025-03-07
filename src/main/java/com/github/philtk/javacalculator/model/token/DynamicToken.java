@@ -5,6 +5,8 @@ import com.github.philtk.javacalculator.utils.InputType;
 /**
  * Represents a dynamic token that can change during input.
  * Dynamic tokens allow modification, such as appending or removing elements.
+ *
+ * @author Phil Winkel
  */
 public abstract class DynamicToken implements Token {
     /**

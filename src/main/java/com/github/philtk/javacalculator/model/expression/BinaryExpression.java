@@ -7,6 +7,8 @@ import com.github.philtk.javacalculator.utils.InputType;
 /**
  * Represents a binary expression consisting of two operands and an operator.
  * Supports addition, subtraction, multiplication, and division.
+ *
+ * @author Phil Winkel
  */
 public class BinaryExpression extends Expression {
     private final Expression left;

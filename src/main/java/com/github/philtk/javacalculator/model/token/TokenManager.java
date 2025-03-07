@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 /**
  * Manages a list of tokens and provides methods to manipulate them.
  * Tokens are added, removed, and displayed in a sequence.
+ *
+ * @author Phil Winkel
  */
 public class TokenManager {
     private final List<Token> tokens;

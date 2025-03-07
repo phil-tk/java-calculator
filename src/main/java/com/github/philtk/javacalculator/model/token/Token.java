@@ -5,6 +5,8 @@ import com.github.philtk.javacalculator.utils.Category;
 /**
  * Represents a generic token in the calculator.
  * Tokens are used to build expressions and define operations.
+ *
+ * @author Phil Winkel
  */
 public interface Token {
     /**

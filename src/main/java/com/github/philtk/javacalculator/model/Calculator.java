@@ -9,6 +9,8 @@ import java.util.List;
 /**
  * The Calculator class is responsible for evaluating mathematical expressions.
  * It takes a list of tokens representing an expression and calculates the result.
+ *
+ * @author Phil Winkel
  */
 public class Calculator {
 

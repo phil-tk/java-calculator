@@ -7,6 +7,8 @@ import com.github.philtk.javacalculator.utils.InputType;
 /**
  * Represents an Answer token, typically holding the final result of a calculation.
  * It wraps a NumberToken and the corresponding value of the answer.
+ *
+ * @author Phil Winkel
  */
 public class AnswerToken extends StaticToken {
     private final NumberToken numberToken;

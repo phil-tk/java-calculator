@@ -4,6 +4,8 @@ import com.github.philtk.javacalculator.model.Value;
 
 /**
  * Represents a numerical expression containing a single value.
+ *
+ * @author Phil Winkel
  */
 class NumberExpression extends Expression {
     private final Value value;

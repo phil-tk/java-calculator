@@ -5,6 +5,8 @@ import com.github.philtk.javacalculator.utils.Category;
 /**
  * Represents a static token that does not change dynamically during input.
  * Static tokens include operators and predefined symbols.
+ *
+ * @author Phil Winkel
  */
 public abstract class StaticToken implements Token {
 

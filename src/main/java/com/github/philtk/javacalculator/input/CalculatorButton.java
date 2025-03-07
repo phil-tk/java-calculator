@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 /**
  * Represents a calculator button with a specific style and functionality.
  * This class extends {@link Button} and integrates custom styling and input handling.
+ *
+ * @author Phil Winkel
  */
 public class CalculatorButton extends Button {
     private final InputType inputType;

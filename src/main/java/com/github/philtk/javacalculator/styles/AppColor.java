@@ -2,6 +2,12 @@ package com.github.philtk.javacalculator.styles;
 
 import javafx.scene.paint.Color;
 
+/**
+ * Enum representing the color scheme used in the application.
+ * Defines various colors for backgrounds, fonts, and interactive elements.
+ *
+ * @author Phil Winkel
+ */
 public enum AppColor {
     BACKGROUND(Color.rgb(32, 32, 32)),
     TEXT_PRIMARY(Color.WHITE),
@@ -24,10 +30,16 @@ public enum AppColor {
 
     private final Color color;
 
+    /**
+     * Constructor to associate a color with each enum value.
+     *
+     * @param color The color value.
+     */
     AppColor(final Color color) {
         this.color = color;
     }
 
-    public Color getColor() { return color; }
+    public Color getColor() {
+        return color;
+    }
 }
-

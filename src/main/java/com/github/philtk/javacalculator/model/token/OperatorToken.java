@@ -5,6 +5,8 @@ import com.github.philtk.javacalculator.utils.InputType;
 
 /**
  * Represents an operator token within a mathematical expression.
+ *
+ * @author Phil Winkel
  */
 public class OperatorToken extends StaticToken {
     private final InputType operator;

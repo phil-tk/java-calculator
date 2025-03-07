@@ -14,6 +14,8 @@ import java.util.List;
  * The Value class represents a numerical value with high precision. It provides methods for
  * performing arithmetic operations like addition, subtraction, multiplication, and division.
  * The precision is handled internally with different contexts for internal and external precision.
+ *
+ * @author Phil Winkel
  */
 public class Value {
 

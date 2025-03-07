@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 /**
  * Represents a numerical token that can store and process numbers entered by the user.
+ *
+ * @author Phil Winkel
  */
 public class NumberToken extends DynamicToken {
     private final ArrayList<InputType> number;

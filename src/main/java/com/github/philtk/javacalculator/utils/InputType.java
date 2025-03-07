@@ -1,10 +1,11 @@
 package com.github.philtk.javacalculator.utils;
 
 import java.awt.event.KeyEvent;
-import java.util.Arrays;
-import java.util.Optional;
 import java.util.Set;
 
+/**
+ * Enum representing different types of inputs for the calculator.
+ */
 public enum InputType {
     ZERO("0", "0", "0", Category.NUMBER, Set.of(KeyEvent.VK_0, KeyEvent.VK_NUMPAD0)),
     ONE("1", "1", "1", Category.NUMBER, Set.of(KeyEvent.VK_1, KeyEvent.VK_NUMPAD1)),
@@ -36,6 +37,17 @@ public enum InputType {
     private final Category category;
     private final Set<Integer> keyCodes;
 
+    /**
+     * Constructs an InputType enum entry.
+     *
+     * @author Phil Winkel
+     *
+     * @param internalText Internal string representation.
+     * @param buttonTxt    Text displayed on the button.
+     * @param displayTxt   Text displayed on the screen.
+     * @param category     Category of the input.
+     * @param keyCodes     Set of key codes associated with the input.
+     */
     InputType(final String internalText, final String buttonTxt, final String displayTxt,
               final Category category, final Set<Integer> keyCodes) {
         this.internalText = internalText;
@@ -55,6 +67,11 @@ public enum InputType {
             ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE
     );
 
+    /**
+     * Checks if the input is a digit.
+     *
+     * @return True if it is a digit, false otherwise.
+     */
     public boolean isDigit() {
         return DIGITS.contains(this);
     }

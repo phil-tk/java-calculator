@@ -11,6 +11,8 @@ import java.util.List;
 /**
  * Parses a list of tokens into an expression tree.
  * Handles operator precedence and ensures correct syntax.
+ *
+ * @author Phil Winkel
  */
 public class ExpressionParser {
 

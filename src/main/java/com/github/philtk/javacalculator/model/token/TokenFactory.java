@@ -6,6 +6,8 @@ import com.github.philtk.javacalculator.utils.InputType;
 /**
  * Factory class responsible for creating different types of tokens based on input type.
  * The factory method ensures that the appropriate token is created based on the input type category.
+ *
+ * @author Phil Winkel
  */
 public class TokenFactory {
 

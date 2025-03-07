@@ -6,6 +6,8 @@ import com.github.philtk.javacalculator.utils.Category;
 /**
  * Represents an error token within the calculator.
  * Used to indicate an invalid state or computation error.
+ *
+ * @author Phil Winkel
  */
 public class ErrorToken extends StaticToken {
     private final CalculatorErrorType calculatorErrorType;
