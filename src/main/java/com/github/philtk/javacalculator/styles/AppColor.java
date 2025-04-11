@@ -13,10 +13,10 @@ public enum AppColor {
     TEXT_PRIMARY(Color.WHITE),
     TEXT_SECONDARY(Color.rgb(160, 160, 160)),
 
-    EQUAL_DEFAULT_BACKGROUND(Color.rgb(118, 185, 237)),
-    EQUAL_HOVER_BACKGROUND(Color.rgb(109, 169, 216)),
-    EQUAL_CLICK_BACKGROUND(Color.rgb(100, 154, 195)),
-    EQUAL_FONT(Color.rgb(33, 52, 66)),
+    EQUAL_DEFAULT_BACKGROUND(Color.rgb(255, 179, 71)),
+    EQUAL_HOVER_BACKGROUND(Color.rgb(240, 165, 65)),
+    EQUAL_CLICK_BACKGROUND(Color.rgb(225, 150, 58)),
+    EQUAL_FONT(Color.rgb(66, 44, 16)),
 
     NUMBER_DEFAULT_BACKGROUND(Color.rgb(59, 59, 59)),
     NUMBER_HOVER_BACKGROUND(Color.rgb(50, 50, 50)),
