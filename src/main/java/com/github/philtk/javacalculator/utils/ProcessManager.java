@@ -74,7 +74,7 @@ public class ProcessManager {
     private void handleControlInput(final InputType inputType) {
         switch (inputType) {
             case CLEAR -> tokenManager.clear();
-            case BACKSPACE -> tokenManager.removeLast();
+            case BACKSPACE -> handleBackspace();
             case EQUAL -> calculate();
             default -> throw new IllegalArgumentException("Unexpected control command: " + inputType);
         }
@@ -124,6 +124,15 @@ public class ProcessManager {
             tokenManager.addToken(TokenFactory.createToken(CalculatorErrorType.fromException(e)));
         }
         contextManager.setResultDisplayed(true);
+    }
+
+    /**
+     * Safely removes the last token if the input is not empty.
+     */
+    private void handleBackspace() {
+        if (!tokenManager.getTokens().isEmpty()) {
+            tokenManager.removeLast();
+        }
     }
 
     /**
