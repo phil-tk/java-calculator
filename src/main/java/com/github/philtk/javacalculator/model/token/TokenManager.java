@@ -88,7 +88,7 @@ public class TokenManager {
     public List<Token> getTokens() {
         return List.copyOf(tokens);
     }
-    
+
     /**
      * Checks whether the current token list is empty.
      *

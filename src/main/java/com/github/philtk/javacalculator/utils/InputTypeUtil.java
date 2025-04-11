@@ -18,12 +18,18 @@ public class InputTypeUtil {
     }
 
     /**
-     * Retrieves the corresponding InputType based on the provided key code.
+     * Retrieves the corresponding InputType based on the provided key code and Shift key state.
      *
-     * @param keyCode the key code to look up
-     * @return an Optional containing the matching InputType, or empty if no match is found
+     * @param keyCode    The key code to look up.
+     * @param isShiftDown Whether the Shift key is pressed.
+     * @return An Optional containing the matching InputType, or empty if no match is found.
      */
-    public static Optional<InputType> getInputTypeFrom(final int keyCode) {
+    public static Optional<InputType> getInputTypeFrom(final int keyCode, final boolean isShiftDown) {
+        if (isShiftDown) {
+            return Arrays.stream(InputType.values())
+                    .filter(type -> type.getKeyCodesShift().contains(keyCode))
+                    .findFirst();
+        }
         return Arrays.stream(InputType.values())
                 .filter(type -> type.getKeyCodes().contains(keyCode))
                 .findFirst();

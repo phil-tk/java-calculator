@@ -7,6 +7,7 @@ import com.github.philtk.javacalculator.utils.InputTypeUtil;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import java.util.List;
 import java.util.Optional;
@@ -46,6 +47,7 @@ public class CalculatorInputHandler {
         scene.setOnKeyPressed(this::handleKeyPress);
     }
 
+
     /**
      * Handles a button press event and processes the corresponding input.
      *
@@ -67,11 +69,15 @@ public class CalculatorInputHandler {
 
     /**
      * Handles a key press event and processes the corresponding input if valid.
+     * Ignores modifier keys and processes valid input types based on key code and Shift state.
      *
      * @param event The key event triggered by a keyboard input.
      */
     private void handleKeyPress(final KeyEvent event) {
-        Optional<InputType> optionalInputType = InputTypeUtil.getInputTypeFrom(event.getCode().getCode());
+        if (event.getCode().isModifierKey()) {
+            return;
+        }
+        Optional<InputType> optionalInputType = InputTypeUtil.getInputTypeFrom(event.getCode().getCode(), event.isShiftDown());
         optionalInputType.ifPresent(inputType -> controller.processInput(inputType, EventType.KEY));
     }
 }
