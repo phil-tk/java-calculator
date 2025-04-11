@@ -111,9 +111,13 @@ public class ProcessManager {
 
     /**
      * Performs the calculation based on the current token list.
+     * Skips calculation if input is empty.
      * Handles exceptions by displaying an error token.
      */
     private void calculate() {
+        if (tokenManager.getTokens().isEmpty()) {
+            return;
+        }
         try {
             historyManager.saveHistory(tokenManager.getDisplayText());
             final Value result = calculateResult();
