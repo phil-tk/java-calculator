@@ -53,4 +53,14 @@ public class HistoryManager {
     public AnswerToken getLastAnswer() {
         return lastAnswer;
     }
+
+    /**
+     * Appends the computed answer to the existing history line.
+     * Intended to be called after a new input is started following a result.
+     *
+     * @param answer the answer value to append to the existing history line
+     */
+    public void showAnswerInHistory(final String answer) {
+        history = history + " " + answer;
+    }
 }

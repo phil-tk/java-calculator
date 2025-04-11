@@ -43,16 +43,25 @@ public class ProcessManager {
      */
     public void processInput(final InputType inputType, final EventType eventType) {
         final InputType adaptedInputType = contextManager.getUsableInputType(inputType, tokenManager.getTokens(), eventType);
-        if (contextManager.shouldClearOnNextInput()) {
-            tokenManager.clear();
-            contextManager.setResultDisplayed(false);
-        }
+        prepareForNewInput();
         switch (adaptedInputType.getCategory()) {
             case CONTROL -> handleControlInput(adaptedInputType);
             case OPERATOR -> handleOperatorInput(adaptedInputType);
             case NUMBER -> handleNumberInput(adaptedInputType);
             case ANSWER -> handleAnswerInput();
             default -> throw new IllegalArgumentException("Unknown category: " + adaptedInputType.getCategory());
+        }
+    }
+
+    /**
+     * Clears the input if the last result was just displayed.
+     * Before clearing, appends the last result to the history display.
+     */
+    private void prepareForNewInput() {
+        if (contextManager.shouldClearOnNextInput()) {
+            historyManager.showAnswerInHistory(tokenManager.getDisplayText());
+            tokenManager.clear();
+            contextManager.setResultDisplayed(false);
         }
     }
 
