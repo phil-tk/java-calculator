@@ -115,7 +115,7 @@ public class ProcessManager {
      * Handles exceptions by displaying an error token.
      */
     private void calculate() {
-        if (tokenManager.getTokens().isEmpty()) {
+        if (tokenManager.hasNoTokens()) {
             return;
         }
         try {
@@ -134,7 +134,7 @@ public class ProcessManager {
      * Safely removes the last token if the input is not empty.
      */
     private void handleBackspace() {
-        if (!tokenManager.getTokens().isEmpty()) {
+        if (!tokenManager.hasNoTokens()) {
             tokenManager.removeLast();
         }
     }
